@@ -8,6 +8,9 @@ function load()
     if(localStorage.total_linhas == undefined){localStorage.total_linhas = 0};
     criarLinha(localStorage.total_linhas);
 
+    $dados = JSON.parse(localStorage.dados);
+    console.log('$dados:', $dados)
+
 }
 
 function salvar()
@@ -64,7 +67,7 @@ function criarLinha(numero_linhas)
         repetidor1++;
 
         $dados['linha' + $total_linhas] = {'data':'','modelo':'','valor':''};
-        console.log($dados);
+        console.log('adicionadas: linha'+$total_linhas+', linhas atuais:',$dados);
     }
 }
 
@@ -77,10 +80,9 @@ function deletarLinha()
         document.querySelector('#COLUNA_MODELO').querySelectorAll('div')[$total_linhas - 1].remove();
         document.querySelector('#COLUNA_VALOR').querySelectorAll('div')[$total_linhas - 1].remove();
         $total_linhas = parseInt($total_linhas) - 1;
-        console.log("Números de linhas:", $total_linhas);
 
-        Object.keys($dados).pop();
-        console.log($dados);
+        delete $dados['linha' + ($total_linhas +1)]
+        console.log('deletados: linha'+($total_linhas+1)+', linhas atuais:',$dados);
 
         
     }
