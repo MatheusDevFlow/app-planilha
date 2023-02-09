@@ -1,0 +1,200 @@
+:root
+{
+    --colorblack1: rgb(32,34,38);
+    --colorblack2: rgb(47,49,54);
+    --colorblack3: rgb(49, 51, 62);
+
+    --color_orange1: #ff5213;
+    --color_orange2: #ff972f;
+    
+    --colorpurple1: #150050;
+    --colorpurple2: #270082;
+
+    --roxo: purple;
+    
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+    user-select: none;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(rgb(84, 8, 101), rgb(51, 5, 62) 150%);
+    z-index: 2;
+}
+
+img
+{
+    min-width: 30px;
+    max-width: 60px;
+    background-color: wheat;
+    border: 3px solid rgba(203, 3, 146, 0.351);
+    border-radius: 1000px;
+    padding: 0px 5px 6px 5px;
+}
+
+#VALOR_TOTAL
+{
+    top: 100px;
+    position: fixed;
+    background-color: rgb(199, 172, 213);
+    width: 100%;
+    height: 54px;
+    border-bottom: 4px solid rgb(101, 15, 120);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body
+{
+    background:no-repeat var(--colorblack3);
+    min-height: 100%;
+    height: 100vh;
+    width: 100%;
+}
+
+
+main
+{
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*TABELA*/
+#TABELA
+{
+    
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+
+    width: 90%;
+    height: 0px;
+}
+
+.COLUNA
+{
+    width: 100%;
+}
+
+#COLUNA_NUM
+{
+    width: 30%;
+}
+
+.NUM
+{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    min-height: 30px;
+    max-height: 30px;
+    text-align: center;
+    font-size: 1em;
+    color: wheat;
+    background: linear-gradient(rgb(84, 8, 101), rgb(51, 5, 62) 150%);
+    border-collapse: collapse;
+    border: 2px solid black;
+    border-right: 1px;
+    border-top: 1px;
+    
+}
+
+.HEADER_COLUNA
+{
+    padding: 15px 0px;
+    text-align: center;
+    background: linear-gradient(rgb(84, 8, 101), rgb(51, 5, 62) 150%);
+    border: 2px solid black;
+    width: 100%;
+    font-size: calc(0.5em + 1vw);
+    color: wheat;
+    font-weight: bolder;
+}
+
+.CELL
+{
+    overflow-y: scroll;
+    padding: 5px 0px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    border-top: 1px;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    min-height: 30px;
+    max-height: 30px;
+    background-color: white;
+}
+
+
+/*BOTÂO*/
+#botoes
+{
+    bottom: 40px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+    width: 100%;
+
+}
+
+#botoes button
+{
+    border: 2px solid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    width: 140px;
+    height: 60px;
+    border-radius: 20px;
+    color: rgba(0, 0, 0, 0.613);
+}
+
+#ADD_C
+{
+    background-color: rgb(65, 227, 59);
+}
+
+#DEL_C
+{
+    background-color: rgb(237, 48, 48);
+}
+
+#BTN_SALVAR
+{
+    top: 150px ;
+    left: -15px;
+    padding: 15px 10px 15px 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid rgb(101, 15, 120);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    position: fixed;
+    background: linear-gradient(rgb(84, 8, 101), rgb(51, 5, 62) 150%);
+    color: rgb(245, 222, 179);
+    z-index: 1;
+}
