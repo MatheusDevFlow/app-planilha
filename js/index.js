@@ -10,8 +10,17 @@ function load()
 
     // Desconvertendo de JSON para Objeto
     $dados = JSON.parse(localStorage.dados);
-
     console.log('$dados:', $dados)
+
+    // Adcionar os valores armazenados em $dados nas suas respectivas células
+    for(let counter = 0; counter < $total_linhas; counter++)
+    {
+        document.querySelector('#data' + (counter+1)).textContent = $dados['linha' + (counter+1)].data;
+
+        document.querySelector('#modelo' + (counter+1)).textContent = $dados['linha' + (counter+1)].modelo;
+        
+        document.querySelector('#valor' + (counter+1)).textContent = $dados['linha' + (counter+1)].valor;
+    }
 };
 
 function salvar()
