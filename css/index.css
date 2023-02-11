@@ -138,7 +138,7 @@ main
     border-collapse: collapse;
     border: 2px solid black;
     border-top: 1px;
-    font-size: 1em;
+    font-size: calc(0.5em + 1vw);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 100%;
@@ -163,26 +163,24 @@ main
 
 #botoes button
 {
-    border: 2px solid;
+    border: 2px solid rgba(0, 0, 0, 0.7);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1em;
     width: 140px;
     height: 60px;
     border-radius: 20px;
-    color: rgba(0, 0, 0, 0.613);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #ADD_C
 {
-    background-color: rgb(65, 227, 59);
+    background-color: rgb(40, 200, 40);
 }
-
-
 
 #DEL_C
 {
-    background-color: rgb(237, 48, 48);
+    background-color: rgb(200, 40, 40);
 }
 
 #BTN_SALVAR
