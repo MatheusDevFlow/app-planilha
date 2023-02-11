@@ -1,5 +1,5 @@
 var $total_linhas = 0;
-
+let valor_total = 0;
 var $dados = {};
 
 function load()
@@ -121,4 +121,24 @@ function enviarDados(event)
 
 function soma()
 {
+
+    for(let counter = 0; counter < $total_linhas; counter++)
+    {
+        if(typeof parseFloat($dados['linha' + (counter+1)].valor) == "number" & $dados['linha' + (counter+1)].valor != '')
+        {
+            valor_total = valor_total + parseFloat($dados['linha' + (counter+1)].valor)
+        }
+    }
+
+    switch(valor_total > 0)
+    {
+        case true: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL: '+ valor_total;
+        break;
+        case false: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL:';
+        break;
+    }
+
+
+    valor_total = 0;
+
 };
