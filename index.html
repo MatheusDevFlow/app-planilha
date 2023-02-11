@@ -11,7 +11,7 @@
 </head>
 <body onload="load()">
 
-    <a href="#TABELA" style="text-decoration: none; color: black;">
+    <a href="#" style="text-decoration: none; color: black;">
     <header id="HEADER">
 
             <img src="icon/cake.png">
@@ -21,9 +21,13 @@
     
     
     <main>
-        <span id="BTN_SALVAR" onclick="salvar()">salvar</span>
+        <span id="BTN_SALVAR"
+        onclick="salvar()"
+        onmousedown="this.style.border = '2px solid rgb(184, 29, 218)'; this.style.filter = 'brightness(120%)'"
+        onmouseup="this.style.border = '2px solid rgb(101, 15, 120)'; this.style.filter = 'brightness(100%)'"
+        onmouseout="this.style.border = '2px solid rgb(101, 15, 120)'; this.style.filter = 'brightness(100%)'">salvar</span>
 
-        <div id="TABELA">
+        <div id="TABELA" spellcheck="false">
             
             <ul id="COLUNA_NUM">
                 <p class="HEADER_COLUNA">N°</p>
@@ -48,8 +52,8 @@
     </main>
 
     <div id="botoes">
-        <button type="button" id="ADD_C" onclick="criarLinha(1)">adicionar</button>
-        <button type="button" id="DEL_C" onclick="deletarLinha()">deletar</button>
+        <button type="button" id="ADD_C" onclick="criarLinha(1)" onmousedown="this.style.filter= 'brightness(80%)'" onmouseup="this.style.filter= 'brightness(100%)'" onmouseout="this.style.filter= 'brightness(100%)'">adicionar</button>
+        <button type="button" id="DEL_C" onclick="deletarLinha()" onmousedown="this.style.filter= 'brightness(80%)'" onmouseup="this.style.filter= 'brightness(100%)'" onmouseout="this.style.filter= 'brightness(100%)'">deletar</button>
     </div>
 </body>
 </html>
