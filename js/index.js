@@ -21,6 +21,8 @@ function load()
         
         document.querySelector('#valor' + (counter+1)).textContent = $dados['linha' + (counter+1)].valor;
     }
+
+    soma();
 };
 
 function salvar()
@@ -100,6 +102,9 @@ function deletarLinha()
         delete $dados['linha' + ($total_linhas +1)];
 
         console.log('deletados: linha'+($total_linhas+1)+', linhas atuais:',$dados)
+    
+        soma();
+
     }
 };
 
@@ -137,7 +142,6 @@ function soma()
         case false: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL:';
         break;
     }
-
 
     valor_total = 0;
 
