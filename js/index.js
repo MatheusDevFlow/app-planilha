@@ -137,7 +137,7 @@ function soma()
 
     switch(valor_total > 0)
     {
-        case true: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL: '+ valor_total;
+        case true: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL: '+ valor_total.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
         break;
         case false: document.querySelector('#VALOR_TOTAL').textContent = 'VALOR TOTAL:';
         break;
